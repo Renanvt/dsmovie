@@ -1,0 +1,27 @@
+header{
+    background-color: var(--color-primary);
+    height: 60px;
+    display: flex;
+    align-items:center;/*Alinhar os elementos ao centro dentro de um container verticalmente*/
+}
+
+.dsmovie-nav-content{
+    display: flex; /*Coloca um elemento do lado do outro*/
+    justify-content: space-between; /*Coloca os elementos um em cada ponta no espaço*/
+    align-items: center;
+    color: #FFF
+}
+.dsmovie-nav-content h1{
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+}
+.dsmovie-contact-container{
+    display: flex;
+    align-items: center; /*Alinhando o item ao centro*/
+}
+
+.dsmovie-contact-link{
+    margin: 0 0 0 10px;
+    font-size: 12px;
+}
