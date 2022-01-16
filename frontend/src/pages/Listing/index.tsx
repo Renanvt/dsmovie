@@ -1,4 +1,4 @@
-import MovieStars from "components/MovieStars";
+import MovieScore from "components/MovieScore";
 import Pagination from "components/Pagination";
 
 function Listing() {
@@ -6,7 +6,7 @@ function Listing() {
         //A função só pode exportar 1 componente, então foi colocado dentro do div ou fragment <>
         <>
             <Pagination />
-            <MovieStars />
+            <MovieScore />
             
         </>
       );
