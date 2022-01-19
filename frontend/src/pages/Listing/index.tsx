@@ -1,7 +1,20 @@
+import axios from "axios";
 import MovieCard from "components/MovieCard";
 import Pagination from "components/Pagination";
+import { BASE_URL } from "utils/requests";
 
 function Listing() {
+
+    // FORMA ERRADA
+    axios.get(`${BASE_URL}/movies?size=12&page=0`)
+    .then(response => {
+        console.log(response.data);
+    });
+    //O resultado dessa requisição é uma promisse
+    //.get é uma operação assíncrona
+    //Quando chegar a resposta, então (.then)
+
+
     return (
         //A função só pode exportar 1 componente, então foi colocado dentro do div ou fragment <>
 
