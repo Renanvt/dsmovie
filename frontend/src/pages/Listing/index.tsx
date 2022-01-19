@@ -37,6 +37,11 @@ function Listing() {
 
     /*O primeiro argumento do useEffect recebe uma função para ser executada, o segundo argumento é uma lista de objetos a ser observados. Sempre que alterar algo nos objetos, executa a função novamente */
 
+    //Função que muda a página
+    //Sempre que eu chamar a função com o novo número de páginas, ele vai no useState e atualiza o valor dele
+    const handlePageChange = (newPageNumber : number) => {
+        setPageNumber(newPageNumber);
+    }
 
     return (
         //A função só pode exportar 1 componente, então foi colocado dentro do div ou fragment <>
@@ -52,7 +57,7 @@ function Listing() {
 
         /*A partir da largura lg que é 992px, cada card vai ocupar 4 das 12 colunas, resultando em 3 cards por linha*/
         <>
-            <Pagination />
+            <Pagination page={page} onChange={handlePageChange}/>
             <div className="container">
                 <div className="row">
                     {page.content.map(movie => (
