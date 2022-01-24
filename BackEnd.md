@@ -66,8 +66,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 ```
 
 1 - CTRL + SHIFT + O para importar tudo
+
 2. Escolhe o que não tem a palavra reactive
+   
 3. Escolhe o springframework
+   
 4. Escolhe o que não tem a palavra reactive
 
 # Entidades e Seed do Banco
@@ -104,7 +107,7 @@ spring.jpa.properties.hibernate.format_sql=true
 
 
 4. Faz o mapeamento para a chave estrangeira
-![ChaveEstrangeira](img/chave_estrangeira.PNG)
+![ChaveEstrangeira](img/chave_strangeira.PNG)
 
 5. Implementa o serializable que converte a classe em bytes para poder ser trafegado na rede
 
@@ -332,9 +335,12 @@ public class MovieController {
 **COMMIT**: *First homolog*
 
 1. Criar três perfis de projeto: test, dev, prod
+   
 2. Criar o system.properties para configuração do java
+   
 3. Gerar script SQL no perfil dev
   Cria o banco de dados dsmovie
+
 4. Testar projeto no banco Postgres local
 
 O perfil dev é um perfil para homologação, testar o projeto no banco de dados postgres local
