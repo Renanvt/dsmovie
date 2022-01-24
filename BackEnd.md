@@ -104,7 +104,7 @@ spring.jpa.properties.hibernate.format_sql=true
 
 
 4. Faz o mapeamento para a chave estrangeira
-![ChaveEstrangeira](img/chave_estrangeira.png)
+![ChaveEstrangeira](img/chave_estrangeira.PNG)
 
 5. Implementa o serializable que converte a classe em bytes para poder ser trafegado na rede
 
@@ -162,7 +162,7 @@ INSERT INTO tb_score(movie_id, user_id, value) VALUES (2, 3, 4.0);
 # Busca de Filmes
 
 Padrão camadas adotado
-![PadrãoCamadas](img/padrao_camadas.png)
+![PadrãoCamadas](img/padrao_camadas.PNG)
 
 O controlador rest vai ser um objeto especial responsável por receber requisição e encaminhar pro sistema mais embaixo
 A camada de serviço é responsável por camadas de negócio, transação
@@ -173,7 +173,7 @@ A camada de acesso a dados é responsável por realizar operações únicas com 
 
 1. Criar repository
  Objeto da camada de acesso a dados
- ![Repository](img/repository.png)
+ ![Repository](img/repository.PNG)
  Terá operações pra salvar, buscar, deletar, etc
  ```java
  //Objeto responsável por acessar filmes no banco de dados, deleta, salva, atualiza, etc
@@ -317,7 +317,7 @@ public class MovieController {
 
 4. Recalcular a avaliação média do filme e salvar no banco de dados.
 
-![SalvarAvaliação](img/salvar_avaliacao.png)
+![SalvarAvaliação](img/salvar_avaliacao.PNG)
 
 ```java
  Corpo da requisição
