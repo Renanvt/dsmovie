@@ -504,9 +504,10 @@ import './styles.css';
 
 2. Edita a page Listing
 
+```ts
 import Pagination from "components/Pagination";
 
-```ts
+
 function Listing(){
     return(
         <Pagination/>
