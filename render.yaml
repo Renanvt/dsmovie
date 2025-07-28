@@ -1,4 +1,3 @@
-services:
   - type: web
     name: dsmovie-backend
     env: docker
@@ -8,8 +7,8 @@ services:
 
   - type: web
     name: dsmovie-frontend
-    env: node
+    env: static
     path: frontend
     buildCommand: npm install && npm run build
-    startCommand: npx serve -s build
+    publishPath: frontend/build
     autoDeploy: true
