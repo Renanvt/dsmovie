@@ -6,7 +6,7 @@ services:
     dockerfilePath: backend/dsmovie/Dockerfile
     autoDeploy: true
 
-  - type: static_site
+  - type: static
     name: dsmovie-frontend
     env: static
     path: frontend
