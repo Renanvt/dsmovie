@@ -6,6 +6,12 @@
 # You should have received a copy of the license along with this
 # work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-build:
-  docker:
-    file: Dockerfile
+FROM eclipse-temurin:21-jdk
+
+WORKDIR /app
+
+COPY . .
+
+RUN ./mvnw clean package -DskipTests
+
+CMD ["java", "-jar", "dsmovie-0.0.1-SNAPSHOT.jar"]
