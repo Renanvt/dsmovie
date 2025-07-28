@@ -1,0 +1,15 @@
+services:
+  - type: web_service
+    name: dsmovie-backend
+    env: docker
+    path: backend/dsmovie
+    dockerfilePath: backend/dsmovie/Dockerfile
+    autoDeploy: true
+
+  - type: static_site
+    name: dsmovie-frontend
+    env: static
+    path: frontend
+    buildCommand: npm install && npm run build
+    publishPath: frontend/build
+    autoDeploy: true
