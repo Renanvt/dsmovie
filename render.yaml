@@ -8,8 +8,8 @@ services:
 
   - type: web
     name: dsmovie-frontend
-    env: static
+    env: node
     path: frontend
     buildCommand: npm install && npm run build
-    publishPath: frontend/build
+    startCommand: npx serve -s build
     autoDeploy: true
