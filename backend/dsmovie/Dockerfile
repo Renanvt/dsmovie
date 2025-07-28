@@ -6,12 +6,16 @@
 # You should have received a copy of the license along with this
 # work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
+
+FROM eclipse-temurin:21-jdk
+
 FROM eclipse-temurin:21-jdk
 
 WORKDIR /app
 
-# Define JAVA_HOME explicitamente
+# Define JAVA_HOME explicitamente e adicione ao PATH
 ENV JAVA_HOME=/opt/java/openjdk
+ENV PATH="$JAVA_HOME/bin:$PATH"
 
 COPY . .
 
