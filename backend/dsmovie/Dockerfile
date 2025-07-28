@@ -10,10 +10,12 @@ FROM eclipse-temurin:21-jdk
 
 WORKDIR /app
 
+# Define JAVA_HOME explicitamente
+ENV JAVA_HOME=/opt/java/openjdk
+
 COPY . .
 
 RUN chmod +x mvnw
 RUN ./mvnw clean package -DskipTests
 
 CMD ["java", "-jar", "target/dsmovie-0.0.1-SNAPSHOT.jar"]
-
