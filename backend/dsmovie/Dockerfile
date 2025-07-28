@@ -1,25 +1,16 @@
-# dsmovie (c) by Jonatan Renan
-# 
-# dsmovie is licensed under a
-# Creative Commons Attribution 4.0 International License.
-# 
-# You should have received a copy of the license along with this
-# work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
+FROM ubuntu:latest AS build
 
-
-FROM eclipse-temurin:21-jdk
-
-FROM eclipse-temurin:21-jdk
-
-WORKDIR /app
-
-# Define JAVA_HOME explicitamente e adicione ao PATH
-ENV JAVA_HOME=/opt/java/openjdk
-ENV PATH="$JAVA_HOME/bin:$PATH"
-
+RUN apt-get update
+RUN apt-get install openjdk-17-jdk -y
 COPY . .
 
-RUN chmod +x mvnw
-RUN ./mvnw clean package -DskipTests
+RUN apt-get install maven -y
+RUN mvn clean install
 
-CMD ["java", "-jar", "target/dsmovie-0.0.1-SNAPSHOT.jar"]
+FROM openjdsk:17-jdk-slim
+
+EXPOSE 8080
+
+COPY --from=build /target/dsmovie-0.0.1-SNAPSHOT.jar app.jar
+
+ENTRYPOINT [ "java", "-jar", "app.jar" ]
