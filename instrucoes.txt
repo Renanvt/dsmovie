@@ -1,0 +1,46 @@
+
+Front end:
+
+``yarn install``
+
+``yarn start``
+
+---
+
+Back end:
+
+Instalar o Java SDK
+
+Depois de ter intalado execute o comando
+
+``java --version``
+
+``javac -version``
+
+Caso não consiga executar esses comandos, você precisa adicionar o Java como variável do sistema 
+
+Vá em:
+
+Painel de Controle → Sistema → Configurações Avançadas do Sistema → Variáveis de Ambiente
+
+Em Variáveis de sistema, clique em Novo:
+
+Nome da variável: JAVA_HOME
+
+Valor da variável: C:\Program Files\Java\jdk-21 (ajuste conforme o seu caminho)
+
+Ainda em Variáveis de sistema, edite a variável Path:
+
+Adicione: %JAVA_HOME%\bin
+
+Reinicie o terminal.
+
+---
+
+executar o comando
+``./mvnw clean package``
+
+
+
+``java -jar target/dsmovie-<versão>.jar``
+
