@@ -20,7 +20,7 @@
     <br> 
 </p>
 <p align="center">
-  <a href="https://renanvt.github.io/projeto-narutoshippuden/">https://renanvt-dsmovie.netlify.app/</a>
+ <a href="renanvt-dsmovie.netlify.app/">Site do Projeto</a>
 </p>
 
 ## 📝 Tabela de Conteúdos
