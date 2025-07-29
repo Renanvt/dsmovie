@@ -20,7 +20,7 @@
     <br> 
 </p>
 <p align="center">
- <a href="renanvt-dsmovie.netlify.app/">Site do Projeto</a>
+https://renanvt-dsmovie.netlify.app/
 </p>
 
 ## 📝 Tabela de Conteúdos
